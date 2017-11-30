@@ -1,0 +1,33 @@
+canvas {
+	display: block;
+	margin: 0 auto;
+	border: 1px solid #939393;
+}
+
+.noTouch {
+	border-color: #939393;
+}
+
+.touchX,
+.touchY {
+	border-color: #e60000;
+	animation-name: buzzX;
+	animation-duration: 0.05s;
+	animation-iteration-count: 6;
+}
+
+.touchY {
+	animation-name: buzzY;
+}
+
+@keyframes buzzX {
+	to {
+		transform: translateX(-5px);
+	}
+}
+
+@keyframes buzzY {
+	to {
+		transform: translateY(-5px);
+	}
+}

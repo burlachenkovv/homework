@@ -30,30 +30,51 @@ body {
 	border-radius: 2px;
 }
 
+.form__field {
+	position: relative;
+}
+
+label {
+	position: absolute;
+	top: 9px;
+	left: 40px;
+	font-size: 14px;
+	color: #8c9c93;
+}
+
 input {
     width: 100%;
-    border: 2px solid #eeeeee;
-    border-radius: 3px;
-    height: 44px;
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+    height: 34px;
     box-sizing: border-box;
-    margin-bottom: 16px;
-    padding-left: 44px;
+    margin-bottom: 30px;
+    padding-left: 40px;
     background-repeat: no-repeat;
 }
 
+input:focus + label,
+input.valid + label,
+input.error + label {
+	transition-duration: 0.2s;
+	transform: translateY(-20px);
+	font-size: 11px;
+}
+
+
 input[name="login"] {
     background-image: url("../img/login.png");
-    background-position: 16px 10px;
+    background-position: 7px 7px;
 }
 
 input[name="email"] {
     background-image: url("../img/email.png");
-    background-position: 14px 14px;
+    background-position: 5px 11px;
 }
 
 input[name="phone"] {
     background-image: url("../img/phone.png");
-    background-position: 18px 11px;
+    background-position: 8px 8px;
 }
 
 input[name="submit"] {
@@ -68,23 +89,27 @@ input[name="submit"] {
 	text-transform: uppercase;
 }
 
+input[disabled="disabled"] {
+	background-color: #cacaca;
+}
+
 ::placeholder {
 	color: #8c9c93;
 }
 
 input.error {
-	border: 1px solid #e50000;
-	color: #e50000;
+	border-bottom: 1px solid #e50000;
 }
 
 span.error {
+	position: absolute;
+	top: 38px;
+	left: 40px;
 	display: block;
 	color: #e50000;
-	font-size: 12px;
-	line-height: 20px;
-	margin: 0 0 15px 0;
+	font-size: 11px;
 }
 
 input.valid {
-	border: 1px solid #3dcf7e;
+	border-bottom: 1px solid #3dcf7e;
 }
