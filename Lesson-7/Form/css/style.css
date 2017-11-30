@@ -51,6 +51,7 @@ input {
     margin-bottom: 30px;
     padding-left: 40px;
     background-repeat: no-repeat;
+    outline: none;
 }
 
 input:focus + label,
