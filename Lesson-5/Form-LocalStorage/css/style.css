@@ -1,0 +1,173 @@
+@font-face {
+	font-family: "MontserratBold";
+	src: url("../fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f2f2f2;
+	font-family: "Montserrat";
+	font-size: 14px;
+}
+
+h2 {
+	padding: 0;
+	margin: 0 0 20px 0;
+}
+
+.container {
+	width: 600px;
+	margin: 0 auto;
+}
+
+.box {
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+	margin-top: 20px;
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 3px;
+	box-shadow: 0 1px 1px 0 rgba(223, 223, 223, 0.75);
+	text-align: center;
+}
+
+.box::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background-color: #3dcf7e;
+	border-radius: 3px;
+}
+
+button {
+	background-color: #3dcf7e;
+	border: 0;
+	border-radius: 3px;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 10px;
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.flex label {
+	width: 20%;
+	text-transform: capitalize;
+}
+
+.flex input {
+	width: 48%;
+	height: 44px;
+	box-sizing: border-box;
+	padding-left: 30px;
+	border: 2px solid #eeeeee;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+.flex input {
+	background-image: url("../img/about-user.png");
+	background-repeat: no-repeat;
+	background-position: 7px 10px;
+}
+
+.flex input:last-of-type {
+	width: 100%;
+	background-image: url("../img/programming.png");
+	padding-left: 38px;
+}
+
+.flex button {
+	display: block;
+	margin: 0 auto;
+	padding: 10px 50px;
+}
+
+.success {
+	width: 100%;
+	min-height: 150px;
+	background-image: url("../img/succeess.png");
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: 120px;
+}
+
+.success ul {
+	padding-left: 150px;
+	text-align: left;
+}
+
+.success li {
+	position: relative;
+	list-style-type: none;
+	padding-left: 20px;
+	margin-bottom: 5px;
+	text-transform: capitalize;
+}
+
+.success li span {
+	font-weight: bold;
+}
+
+.success li::before {
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 7px;
+	height: 7px;
+	border: 1px solid #3dcf7e;
+	border-radius: 50%;
+}
+
+.close {
+	margin-top: 20px;
+}
+
+table {
+	width: 100%;
+	box-sizing: border-box;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th {
+	text-transform: capitalize;
+	background-color: #eeeeee;
+}
+
+th, td {
+	padding: 10px;
+	border: 1px solid #bababa;
+}
+
+tr:nth-child(2n+1) {
+	background-color: #eeeeee;
+}
+
+tr:hover {
+	background-color: #d2d2d2;
+}
+
+.error {
+	display: block;
+	width: 100%;
+	color: #ff0000;
+	font-size: 1.5em;
+	margin-top: 30px;
+}
