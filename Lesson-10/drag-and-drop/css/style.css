@@ -1,0 +1,52 @@
+.header {
+	display: flex;
+	height: 90px;
+}
+
+h1 {
+	display: inline-block;
+	margin: 0 10px 0 0;
+	align-self: center;
+}
+
+button {
+	height: 25px;
+	align-self: center;
+	margin-left: 10px;
+}
+
+.main {
+	width: 700px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.task {
+	width: 150px;
+	min-height: 100px;
+	overflow: hidden;
+	background-color: #f1f1f1;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	text-align: center;
+	margin: 0 10px 10px 0;
+	align-self: flex-start;
+}
+
+.square {
+	width: 140px;
+	min-height: 30px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	box-sizing: border-box;
+	align-self: flex-start;
+	word-wrap: break-word;
+	margin: 5px auto;
+}
+
+.active {
+	border-color: red;
+}
