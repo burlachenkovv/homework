@@ -4,7 +4,6 @@
 
 .card {
     position: relative;
-    perspective: 800px;
     transform-style: preserve-3d;
     width: 280px;
     height: 380px;
@@ -18,7 +17,7 @@
     box-shadow: 0 0 10px #ccc;
     background-repeat: no-repeat;
     background-position: center;
-    transition: all .8s;
+    /* transition: all .8s; */
 }
 
 .translation h2 {
@@ -46,13 +45,33 @@
 }
 
 .card:hover .hieroglyph {
-    transform: rotate3d(0,1,0, 180deg);
+    animation: rotate-hieroglyph 0.8s;
+	animation-fill-mode: forwards;
 }
 
 .card:hover .translation {
-    transform: rotate3d(0,1,0, 0deg);
+	animation: rotate-translation 0.8s;
+	animation-fill-mode: forwards;
 }
 
 .hieroglyph, .translation {
     backface-visibility: hidden;
+}
+
+@keyframes rotate-hieroglyph {
+	0% {
+		transform: none;
+	}
+	100% {
+    	transform: perspective(800px) rotate3d(0,1,0, 180deg);
+	}
+}
+
+@keyframes rotate-translation {
+	0% {
+		transform: rotate3d(0,1,0, 180deg);
+	}
+	100% {
+		transform: perspective(800px) rotate3d(0,1,0, 0deg);
+	}
 }
