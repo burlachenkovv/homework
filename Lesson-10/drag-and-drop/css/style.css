@@ -22,7 +22,7 @@ button {
 }
 
 .task {
-	width: 150px;
+	width: 200px;
 	min-height: 100px;
 	overflow: hidden;
 	background-color: #f1f1f1;
@@ -35,7 +35,8 @@ button {
 }
 
 .square {
-	width: 140px;
+	position: relative;
+	width: 160px;
 	min-height: 30px;
 	background-color: #fff;
 	border: 1px solid #ccc;
@@ -44,9 +45,39 @@ button {
 	box-sizing: border-box;
 	align-self: flex-start;
 	word-wrap: break-word;
-	margin: 5px auto;
+	margin: 5px 5px;
 }
 
 .active {
 	border-color: red;
+}
+
+.task > span {
+	display: block;
+	margin: 15px auto;
+}
+
+.task button {
+	display: block;
+	margin: 15px auto;
+}
+
+.square button {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 20px;
+	height: 18px;
+	top: 0px;
+	right: -25px;
+}
+
+.task textarea {
+	width: 90%;
+	min-height: 50px;
+}
+
+.square textarea {
+	width: 95%;
+	min-height: 100px;
 }
